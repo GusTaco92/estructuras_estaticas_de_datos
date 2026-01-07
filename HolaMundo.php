@@ -1,5 +1,5 @@
 <?php
 $mensaje="Hello world";
-echo $mensaje;
-
+$mensaje2=";";
+echo $mensaje.$mensaje2;
 ?>
