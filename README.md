@@ -2,7 +2,9 @@
 Repositorio para prácticas de estructura de datos
 
 Palabras reservadas:
-
+if
+elif
+else
 
 
 1. Variables
