@@ -1,0 +1,36 @@
+import requests
+import json
+from statistics import mode
+
+URL = "https://abkiluminacion.com/api/random-array"
+
+try:
+    print("Llamando al API...")
+    respuesta = requests.get(URL)
+    respuesta.raise_for_status()
+    datos = respuesta.json()
+
+    arreglo = datos.get('data', [])
+    datos_oraculo = datos.get('result')
+    print(f"Media o ................: {datos_oraculo['media']}")
+    # print(f"Mediana ..............: {datos_oraculo['mediana']}")
+    # print(f"Moda .................: {datos_oraculo['moda']}")
+    # print(f"Varianza (poblacional): {datos_oraculo['varianza']}")
+    # print(f"Desviación Estándar ..: {datos_oraculo['desviacion_estandar']}")
+
+    #inicio de proceso de obteción de media
+    #acunulador aoidoijdo iasjdio aiodjaiojsdo aijdoiajoidj osijd
+
+    media = 0
+    moda = 0
+    mediana = 0
+
+    print(f"Media ................: {media}")
+    print(f"Moda ................: {moda}")
+    print(f"Mediana ................: {mediana}")
+    if(moda < 0):
+        print("La moda es negativa o no existe")
+    #fin de proceso de obteción
+    print(datos_oraculo)
+except Exception as e:
+    print(f"ERROR inesperado: {e}")
